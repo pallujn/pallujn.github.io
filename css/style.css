@@ -129,3 +129,4 @@ blockquote{border-left:3px solid var(--gold);margin:1.2rem 0;padding:.2rem 0 .2r
 .author-box .author-label{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--sage-dark);margin:0 0 .35rem}
 .author-box p:last-child{margin-bottom:0}
 article #faq h3, article h2#faq + h3, article h3{scroll-margin-top:80px}
+.featured-image figcaption{padding:.45rem .9rem;font-size:.78rem;color:var(--muted)}
