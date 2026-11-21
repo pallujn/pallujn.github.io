@@ -1,0 +1,131 @@
+@font-face{font-family:"Fraunces";src:url("../fonts/FrauncesDisplay-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../fonts/FrauncesDisplay-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../fonts/FrauncesDisplay-Italic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/Nunito-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/Nunito-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/Nunito-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/Nunito-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/Nunito-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --ink:#1E3228;--body:#33322E;--muted:#5E5A53;
+  --sage:#4F6F56;--sage-dark:#3E5844;--sage-mid:#7C9878;
+  --sage-pale:#E3EDDF;--sage-wash:#F0F4EC;
+  --cream:#F3EEE4;--paper:#FFFCF7;--clay:#B86146;
+  --rule:#D8CFBE;--gold:#B8956A;--gold-dark:#9A7A52;
+  --shadow:0 16px 40px rgba(30,50,40,.08);--radius:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Nunito","Segoe UI",sans-serif;font-size:17px;line-height:1.65;color:var(--body);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--sage)}
+a:hover{color:var(--sage-dark)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.5rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+.wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.site-header{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:40}
+.header-inner{display:flex;align-items:center;gap:16px;padding:12px 0;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand-name{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.05rem;line-height:1.2}
+.brand-tag{display:block;font-size:.72rem;color:var(--muted);font-weight:500}
+nav.primary{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+nav.primary a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem}
+nav.primary a:hover{color:var(--sage)}
+.btn{display:inline-block;background:var(--sage);color:#fff !important;text-decoration:none;font-weight:700;padding:.7rem 1.15rem;border-radius:999px;border:0;cursor:pointer;font-family:inherit;font-size:.95rem;line-height:1.2;text-align:center}
+.btn:hover{background:var(--sage-dark)}
+.btn-gold{background:var(--gold-dark)}
+.btn-gold:hover{background:#7e6240}
+.btn-outline{background:transparent;color:var(--sage) !important;box-shadow:inset 0 0 0 2px var(--sage)}
+.disclosure-strip{background:var(--sage-wash);color:var(--muted);font-size:.8rem;padding:.35rem 0;border-bottom:1px solid var(--rule)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;padding:28px 0 64px;align-items:start}
+.layout.single{grid-template-columns:1fr;max-width:760px}
+main h1,main h2,main h3,.hero h1{font-family:"Fraunces",Georgia,serif;color:var(--ink);line-height:1.25;font-weight:600}
+main h1{font-size:clamp(1.8rem,3vw,2.4rem);margin:.3rem 0 1rem}
+main h2{font-size:1.4rem;margin:2rem 0 .7rem}
+main h3{font-size:1.15rem;margin:1.4rem 0 .5rem}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
+.kicker{display:inline-block;background:var(--sage-pale);color:var(--sage-dark);font-weight:700;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;text-decoration:none}
+blockquote{border-left:3px solid var(--gold);margin:1.2rem 0;padding:.2rem 0 .2rem 1rem;color:var(--muted)}
+.box{border-radius:var(--radius);padding:1.15rem 1.25rem;margin:1.4rem 0;box-shadow:var(--shadow)}
+.box p:last-child{margin-bottom:0}
+.box-checklist{background:var(--sage-wash);border:1px solid var(--sage-pale)}
+.box-product{background:#fff;border:1px solid var(--rule)}
+.box .btn{margin-top:.4rem}
+.takeaways{background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.25rem 1rem 2rem}
+.toc{background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.25rem}
+.toc ul{margin:.4rem 0 0}
+.sidebar{position:sticky;top:92px}
+.side-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1.1rem 1.15rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+.side-card h2,.side-card h3{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;margin:.2rem 0 .5rem;color:var(--ink)}
+.article-footer-cta{background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1.2rem;margin:2rem 0}
+.site-footer{background:var(--ink);color:#d7e0d4;padding:36px 0 24px;font-size:.92rem}
+.site-footer a{color:#f3eee4}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.footer-legal{border-top:1px solid rgba(255,255,255,.15);margin-top:24px;padding-top:16px;font-size:.8rem;color:#b7c4b3}
+.hero{padding:24px 0 8px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.hero-card{background:var(--paper);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:1.5rem 0}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1.1rem;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--sage-mid)}
+.card h3{margin:.3rem 0 .4rem;font-family:"Fraunces",Georgia,serif;color:var(--ink)}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#fff;z-index:50;padding:10px 16px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.15)}
+.sticky-bar.is-on{display:block}
+.sticky-inner{width:min(1120px,calc(100% - 16px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sticky-bar .dismiss{background:transparent;border:0;color:#fff;font-size:1.2rem;cursor:pointer}
+.popup-back{position:fixed;inset:0;background:rgba(30,50,40,.45);z-index:60;display:none;align-items:center;justify-content:center;padding:16px}
+.popup-back.is-on{display:flex}
+.popup{background:var(--paper);border-radius:var(--radius);padding:1.6rem;max-width:420px;width:100%;position:relative;box-shadow:var(--shadow)}
+.popup .close{position:absolute;top:8px;right:12px;border:0;background:transparent;font-size:1.3rem;cursor:pointer}
+.notice{background:#fff6e8;border:1px solid var(--gold);border-radius:12px;padding:.8rem 1rem;font-size:.9rem;margin:1rem 0}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;padding-bottom:96px}
+  .sidebar{position:static}
+  .hero-grid,.footer-grid{grid-template-columns:1fr}
+  nav.primary{display:none}
+  .nav-toggle{display:inline-block}
+  nav.primary.is-open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:12px 16px 16px;border-bottom:1px solid var(--rule)}
+  .header-inner{flex-wrap:wrap}
+}
+.nav-toggle{display:none;background:transparent;border:1px solid var(--rule);border-radius:8px;padding:.35rem .6rem;font-weight:700;cursor:pointer}
+.coming{opacity:.85;font-size:.85rem;color:var(--muted)}
+
+/* Imagery added for professional photos, pins, and checklist mockups */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hero-banner{background:var(--ink);line-height:0}
+.hero-banner img{width:100%;height:auto;max-height:620px;object-fit:cover;object-position:center 55%}
+.home-follow{padding:36px 0 72px}
+.home-follow .lede{font-size:1.15rem}
+.checklist-offer img{width:100%;border-radius:14px;margin-bottom:1rem;box-shadow:var(--shadow);background:var(--cream)}
+.featured-image{margin:0 0 1.5rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--sage-wash)}
+.featured-image img{width:100%;aspect-ratio:1200/630;object-fit:cover}
+.box-checklist{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center}
+.box-checklist .checklist-thumb{width:110px;border-radius:10px;box-shadow:0 8px 20px rgba(30,50,40,.08)}
+.box-checklist .checklist-copy{min-width:0}
+.side-card .checklist-thumb{width:100%;border-radius:12px;margin:0 0 .8rem;box-shadow:0 8px 20px rgba(30,50,40,.08)}
+.popup{max-width:440px}
+.popup .checklist-thumb{width:min(220px,70%);margin:0 auto 1rem;border-radius:12px}
+.pin-save{margin:2.2rem 0 0;background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius);padding:1.2rem 1.25rem;text-align:center}
+.pin-save h2{margin-top:0}
+.pin-save a{display:inline-block;text-decoration:none}
+.pin-save img{width:min(260px,100%);margin:0 auto;border-radius:14px;box-shadow:var(--shadow)}
+.pin-save p{color:var(--muted);font-size:.9rem;margin:.7rem 0 0}
+.card{padding:0;overflow:hidden}
+.card img.card-thumb{width:100%;aspect-ratio:1200/630;object-fit:cover;background:var(--sage-wash)}
+.card .card-body{padding:1.05rem 1.1rem 1.15rem}
+.page-checklist-art{max-width:340px;margin:0 0 1.4rem;border-radius:14px;box-shadow:var(--shadow)}
+@media (max-width:860px){
+  .hero-banner img{max-height:420px}
+  .box-checklist{grid-template-columns:1fr}
+  .box-checklist .checklist-thumb{width:160px}
+}
+
+.home-follow .hero-grid{align-items:start;padding-top:8px}
+.home-follow .hero-grid > div{padding-top:8px}
+
+.author-box{margin:2rem 0;padding:1.15rem 1.25rem;border:1px solid var(--rule);border-radius:var(--radius);background:var(--paper)}
+.author-box .author-label{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--sage-dark);margin:0 0 .35rem}
+.author-box p:last-child{margin-bottom:0}
+article #faq h3, article h2#faq + h3, article h3{scroll-margin-top:80px}
